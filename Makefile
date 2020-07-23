@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=AdGuardHome
 PROJECT_NAME:=AdGuardHome
-PKG_VERSION:=v0.99.3
+PKG_VERSION:=v0.102.0
 PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk
@@ -79,8 +79,8 @@ define Build/Compile
 endef
 
 define Package/$(PKG_NAME)/install
-	$(INSTALL_DIR) $(1)/usr/bin/AdGuardHome
-	$(INSTALL_BIN) $(UNTAR_DIR)/*/$(PROJECT_NAME) $(1)/usr/bin/AdGuardHome/$(PKG_NAME)
+	$(INSTALL_DIR) $(1)/etc/adg
+	$(INSTALL_BIN) $(UNTAR_DIR)/*/$(PROJECT_NAME) $(1)/etc/adg/$(PKG_NAME)
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
