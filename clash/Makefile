@@ -51,6 +51,7 @@ define Package/clash
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=A rule-based tunnel in Go.
+	DEPENDS:=+kmod-tun +htop +bind-dig +nano +luci-app-openclash +luci-app-wireguard
 	URL:=https://github.com/BROBIRD/clash/releases
 endef
 
