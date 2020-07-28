@@ -70,7 +70,7 @@ endef
 
 define Package/AdGuardHome/install
 	$(INSTALL_DIR) $(1)/etc/adg
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/AdGuardHome $(1)/etc/adg
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/AdGuardHome/AdGuardHome $(1)/etc/adg
 endef
 
 $(eval $(call BuildPackage,AdGuardHome))
