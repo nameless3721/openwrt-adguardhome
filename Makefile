@@ -60,7 +60,7 @@ Network-wide ads & trackers blocking DNS server
 endef
 
 define Build/Prepare
-    tar -zxvf $(DL_DIR)/$(PKG_SOURCE) -C $(PKG_BUILD_DIR)/AdGuardHome
+    tar -zxvf $(DL_DIR)/$(PKG_SOURCE) -C $(PKG_BUILD_DIR)
 	mv $(DL_DIR)/$(PKG_SOURCE) $(DL_DIR)/AdGuardHome_linux_$(PKG_ARCH)_$(PKG_VERSION)_$(PKG_RELEASE).tar.gz
 endef
 
