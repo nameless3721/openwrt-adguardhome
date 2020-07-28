@@ -19,7 +19,7 @@ define Package/$(PKG_NAME)
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=Network-wide ads & trackers blocking DNS server
-	DEPENDS:=+kmod-tun +htop +bind-dig +nano +luci-app-openclash +luci-app-wireguard +clash
+	DEPENDS:=+kmod-tun +htop +bind-dig +nano +luci-app-openclash +luci-app-wireguard +clash +luci-app-smartdns +luci-app-adguardhome
 	URL:=https://github.com/AdguardTeam/AdGuardHome
 endef
 
