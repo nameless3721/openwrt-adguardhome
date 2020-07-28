@@ -47,15 +47,15 @@ PKG_HASH:=skip
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/AdGuardHome
+define Package/$(PKG_NAME)
 	SECTION:=net
 	CATEGORY:=Network
-	TITLE:=A rule-based tunnel in Go.
-	URL:=https://github.com/AdguardTeam/AdGuardHome/releases
+	TITLE:=Network-wide ads & trackers blocking DNS server
+	URL:=https://github.com/AdguardTeam/AdGuardHome
 endef
 
-define Package/AdGuardHome/description
-	A rule-based tunnel in Go.
+define Package/$(PKG_NAME)/description
+Network-wide ads & trackers blocking DNS server
 endef
 
 define Build/Prepare
