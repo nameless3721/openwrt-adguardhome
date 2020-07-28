@@ -61,7 +61,7 @@ endef
 
 define Build/Prepare
     tar -zxvf $(PKG_BUILD_DIR)/AdGuardHome -C $DL_DIR)/$(PKG_SOURCE)
-	mv $(DL_DIR)/$(PKG_SOURCE) $(DL_DIR)/AdGuardHome_linux_$(PKG_ARCH)-$(PKG_VERSION)-$(PKG_RELEASE).gz
+	mv $(DL_DIR)/$(PKG_SOURCE) $(DL_DIR)/AdGuardHome_linux_$(PKG_ARCH)_$(PKG_VERSION)_$(PKG_RELEASE).tar.gz
 endef
 
 define Build/Compile
