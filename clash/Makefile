@@ -8,9 +8,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=clash
-PKG_VERSION:=1.0.0-R
-PKG_RELEASE:=20200627
-PKG_MAINTAINER:=BROBIRD
+PKG_VERSION:=0.39.5-beta
+PKG_RELEASE:=20200725
+PKG_MAINTAINER:=vernesong
 
 # OpenWrt ARCH: arm, aarch64, i386, x86_64, mips, mipsel
 # Golang ARCH: armv[5-7], armv8, 386, amd64, mips, mipsle
@@ -41,7 +41,7 @@ ifeq ($(ARCH),aarch64)
 endif
 
 PKG_SOURCE:=clash-linux-$(PKG_ARCH)-v$(PKG_VERSION).gz
-PKG_SOURCE_URL:=https://github.com/BROBIRD/clash/releases/download/v$(PKG_VERSION)/
+PKG_SOURCE_URL:=https://github.com/vernesong/OpenClash/releases/download/v$(PKG_VERSION)/
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_HASH:=skip
 
@@ -51,7 +51,7 @@ define Package/clash
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=A rule-based tunnel in Go.
-	URL:=https://github.com/BROBIRD/clash/releases
+	URL:=https://github.com/vernesong/OpenClash
 endef
 
 define Package/clash/description
