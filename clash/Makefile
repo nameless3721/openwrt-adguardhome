@@ -40,7 +40,7 @@ ifeq ($(ARCH),aarch64)
 	PKG_ARCH:=armv8
 endif
 
-PKG_SOURCE:=clash-linux-$(PKG_ARCH)-v$(PKG_VERSION).gz
+PKG_SOURCE:=clash-linux-$(PKG_ARCH)-v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/vernesong/OpenClash/releases/download/v$(PKG_VERSION)/
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_HASH:=skip
@@ -59,8 +59,8 @@ define Package/clash/description
 endef
 
 define Build/Prepare
-	gunzip -c $(DL_DIR)/$(PKG_SOURCE) > $(PKG_BUILD_DIR)/clash
-	mv $(DL_DIR)/$(PKG_SOURCE) $(DL_DIR)/clash-linux-$(PKG_ARCH)-$(PKG_VERSION)-$(PKG_RELEASE).gz
+	tar -zxvf  $(DL_DIR)/$(PKG_SOURCE) -Cc $(PKG_BUILD_DIR)/clash
+	mv $(DL_DIR)/$(PKG_SOURCE) $(DL_DIR)/clash-linux-$(PKG_ARCH)-$(PKG_VERSION)-$(PKG_RELEASE).tar.gz
 endef
 
 define Build/Compile
