@@ -59,7 +59,8 @@ define Package/clash/description
 endef
 
 define Build/Prepare
-	tar -zxvf  $(DL_DIR)/$(PKG_SOURCE) -Cc $(PKG_BUILD_DIR)/clash
+        mkdir $(PKG_BUILD_DIR)/clash
+	tar -zxvf  $(DL_DIR)/$(PKG_SOURCE) -C $(PKG_BUILD_DIR)/clash
 	mv $(DL_DIR)/$(PKG_SOURCE) $(DL_DIR)/clash-linux-$(PKG_ARCH)-$(PKG_VERSION)-$(PKG_RELEASE).tar.gz
 endef
 
