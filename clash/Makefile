@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=clash
-PKG_VERSION:=0.40.10-beta
+PKG_VERSION:=0.40.8-beta
 PKG_RELEASE:=20201014
 PKG_MAINTAINER:=vernesong
 
