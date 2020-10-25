@@ -8,8 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=clash
-PKG_VERSION:=0.40.8-beta
-PKG_RELEASE:=20201014
+PKG_VERSION:=0.40.11-beta
+PKG_RELEASE:=20201026
 PKG_MAINTAINER:=vernesong
 
 # OpenWrt ARCH: arm, aarch64, i386, x86_64, mips, mipsel
