@@ -8,9 +8,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=clash
-PKG_VERSION:=0.40.11-beta
-PKG_RELEASE:=20201026
-PKG_MAINTAINER:=vernesong
+PKG_VERSION:=1.4.0
+PKG_RELEASE:=20210221
+PKG_MAINTAINER:=Dreamacro
 
 # OpenWrt ARCH: arm, aarch64, i386, x86_64, mips, mipsel
 # Golang ARCH: armv[5-7], armv8, 386, amd64, mips, mipsle
@@ -19,7 +19,7 @@ ifeq ($(ARCH),mips)
 	PKG_ARCH:=mips-softfloat
 endif
 ifeq ($(ARCH),mipsel)
-	PKG_ARCH:=mipsle-softfloat
+	PKG_ARCH:=mipsle-hardfloat
 endif
 ifeq ($(ARCH),i386)
 	PKG_ARCH:=386
@@ -40,8 +40,8 @@ ifeq ($(ARCH),aarch64)
 	PKG_ARCH:=armv8
 endif
 
-PKG_SOURCE:=clash-linux-$(PKG_ARCH).tar.gz
-PKG_SOURCE_URL:=https://github.com/vernesong/OpenClash/releases/download/v$(PKG_VERSION)/
+PKG_SOURCE:=clash-linux-$(PKG_ARCH)-$(PKG_VERSION).gz
+PKG_SOURCE_URL:=https://github.com/Dreamacro/clash/releases/download/v$(PKG_VERSION)/
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_HASH:=skip
 
@@ -51,7 +51,7 @@ define Package/clash
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=A rule-based tunnel in Go.
-	URL:=https://github.com/vernesong/OpenClash
+	URL:=https://github.com/Dreamacro
 endef
 
 define Package/clash/description
@@ -59,8 +59,8 @@ define Package/clash/description
 endef
 
 define Build/Prepare
-	tar -zxvf  $(DL_DIR)/$(PKG_SOURCE) -C $(PKG_BUILD_DIR)
-	mv $(DL_DIR)/$(PKG_SOURCE) $(DL_DIR)/clash-linux-$(PKG_ARCH)-$(PKG_VERSION)-$(PKG_RELEASE).tar.gz
+	gzip $(DL_DIR)/$(PKG_SOURCE) -d $(PKG_BUILD_DIR)
+	mv $(DL_DIR)/$(PKG_SOURCE) $(DL_DIR)/clash-linux-$(PKG_ARCH)-$(PKG_VERSION)-$(PKG_RELEASE).gz
 endef
 
 define Build/Compile
