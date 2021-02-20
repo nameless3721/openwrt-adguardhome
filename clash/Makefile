@@ -59,7 +59,7 @@ define Package/clash/description
 endef
 
 define Build/Prepare
-	gzip -d $(DL_DIR)/$(PKG_SOURCE)  $(PKG_BUILD_DIR)
+	gzip -d $(DL_DIR)/$(PKG_SOURCE) 
 	mv $(DL_DIR)/clash-linux-$(PKG_ARCH)-v$(PKG_VERSION) $(PKG_BUILD_DIR)
 	mv $(DL_DIR)/$(PKG_SOURCE) $(DL_DIR)/clash-linux-$(PKG_ARCH)-$(PKG_VERSION)-$(PKG_RELEASE).gz
 endef
