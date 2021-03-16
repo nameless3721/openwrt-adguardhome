@@ -8,8 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=clash
-PKG_VERSION:=1.4.1
-PKG_RELEASE:=20210221
+PKG_VERSION:=1.4.2
+PKG_RELEASE:=20210317
 PKG_MAINTAINER:=Dreamacro
 
 # OpenWrt ARCH: arm, aarch64, i386, x86_64, mips, mipsel
