@@ -51,7 +51,7 @@ define Package/$(PKG_NAME)
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=Network-wide ads & trackers blocking DNS server
-	DEPENDS:=+kmod-tun +htop +bind-dig +nano +luci-app-openclash +luci-app-wireguard +luci-app-smartdns +luci-app-adguardhome +openssh-sftp-server +luci-app-ttyd +iptables-mod-tproxy +iptables-mod-extra +libcap +libcap-bin +ruby +ruby-yaml
+	DEPENDS:=+kmod-tun +htop +bind-dig +nano +luci-app-openclash +luci-app-wireguard +luci-app-smartdns +luci-app-adguardhome +openssh-sftp-server +luci-app-ttyd +iptables-mod-tproxy +iptables-mod-extra +libcap +libcap-bin +ruby +ruby-yaml +git +git-http +wget +curl 
 	URL:=https://github.com/AdguardTeam/AdGuardHome
 endef
 
