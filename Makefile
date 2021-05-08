@@ -8,8 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=AdGuardHome
-PKG_VERSION:=0.106.1
-PKG_RELEASE:=20210501
+PKG_VERSION:=0.106.2
+PKG_RELEASE:=20210508
 PKG_MAINTAINER:=AdguardTeam
 
 # OpenWrt ARCH: arm, aarch64, i386, x86_64, mips, mipsel
