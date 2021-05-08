@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=clash
-PKG_VERSION:=1.5.0
+PKG_VERSION:=1.6.0
 PKG_RELEASE:=20210411
 PKG_MAINTAINER:=Dreamacro
 
